@@ -1,0 +1,8 @@
+url_song_info: https://www.textage.cc/score/titletbl.js
+url_map_info: https://www.textage.cc/score/actbl.js
+url_note_bpm: https://www.textage.cc/score/datatbl.js
+url_version: https://www.textage.cc/score/scrlist.js
+
+db_name: db.sqlite
+
+clear_status: ['NO PLAY', 'FAILED', 'ASSIST', 'EASY', 'NORMAL', 'HARD', 'EX-HARD', 'F-COMBO']
