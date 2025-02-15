@@ -704,7 +704,7 @@ def start_app():
     app = QApplication(sys.argv)
     
     main_window = DynamicWidgetDisplay()
-    main_window.setWindowTitle('Beatmania IIDX点灯助手 by hjhk')
+    main_window.setWindowTitle('Beatmania IIDX点灯小帮手 by hjhk')
 
     page_map_manage = PageMapManage(main_window)
     btn_map_manage = main_window.add_button_and_widget('谱面管理', page_map_manage)
