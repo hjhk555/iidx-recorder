@@ -1,0 +1,6 @@
+requests~=2.31.0
+PyQt5~=5.15.11
+PyYAML~=6.0.2
+matplotlib~=3.8.0
+selenium~=4.27.1
+fuzzywuzzy~=0.18.0

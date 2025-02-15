@@ -1,1 +1,4 @@
 *.sqlite
+
+.idea
+__pycache__

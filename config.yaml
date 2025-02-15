@@ -5,6 +5,6 @@ url_version: https://www.textage.cc/score/scrlist.js
 
 db_name: db.sqlite
 
+type_name: {'B': 'BASIC', 'N': 'NORMAL', 'H': 'HARD', 'A': 'ANOTHER', 'L': 'LEGGENDARIA'}
 clear_status: ['NO PLAY', 'FAILED', 'ASSIST', 'EASY', 'NORMAL', 'HARD', 'EX-HARD', 'F-COMBO']
-clear_fg_color: ['']
-clear_bg_color: []
+clear_font_color: [[130, 130, 130],[99, 44, 44],[148, 0, 211],[84, 191, 34],[26, 145, 219],[209, 15, 15],[207, 172, 0],[255, 110, 180]]
