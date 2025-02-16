@@ -207,15 +207,15 @@ class WidgetMapInfo(QWidget):
 
         if info is not None:
             self.update()
-    def set_clear_changed_action(self, action: Callable[[Self], None]):
+    def set_clear_changed_action(self, action: Callable[['WidgetMapInfo'], None]):
         if action is None:
             return
         self.combo_clear.currentIndexChanged.connect(lambda: action(self))
-    def set_base_changed_action(self, action: Callable[[Self], None]):
+    def set_base_changed_action(self, action: Callable[['WidgetMapInfo'], None]):
         if action is None:
             return
         self.combo_base.currentTextChanged.connect(lambda: action(self))
-    def set_selected_action(self, action: Callable[[Self], None]):
+    def set_selected_action(self, action: Callable[['WidgetMapInfo'], None]):
         if action is None:
             return
         self.btn_select.clicked.connect(lambda: action(self))
@@ -699,8 +699,6 @@ class PageBatchImportBase(QWidget):
         self.text_edit.clear()
 
 def start_app():
-    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True) #enable highdpi scaling
-    QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True) #use highdpi icons
     app = QApplication(sys.argv)
     
     main_window = DynamicWidgetDisplay()
