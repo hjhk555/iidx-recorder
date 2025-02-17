@@ -169,12 +169,12 @@ class WidgetMapInfo(QWidget):
         self.label_title = new_label(font_size=12, fixed=False)
         self.label_title.setStyleSheet('font-weight: bold')
         layout_title.addWidget(self.label_title)
-        self.label_sub_title = new_label(fixed=False, font_size=7)
+        self.label_sub_title = new_label(fixed=False, font_size=8)
         layout_title.addWidget(self.label_sub_title)
         self.label_artist = new_label(fixed=False)
         self.label_artist.setStyleSheet('font-weight: bold')
         layout_title.addWidget(self.label_artist)
-        self.label_genre = new_label(fixed=False, font_size=7)
+        self.label_genre = new_label(fixed=False, font_size=8)
         layout_title.addWidget(self.label_genre)
         self.label_other_info = new_label(fixed=False, font_size=8)
         layout_title.addWidget(self.label_other_info)
@@ -457,7 +457,7 @@ class WidgetMapSearch(QWidget):
                     continue
                 self.list_maps.append(map)
 
-        self.list_maps.sort(key=lambda x : (x.song.title, x.song.sub_title))
+        self.list_maps.sort(key=lambda x : (x.song.title.upper(), x.song.sub_title.upper()))
         if filter_genre!='':
             self.list_maps.sort(key=lambda x : (-fuzz.partial_ratio(filter_genre.upper(), x.song.genre.upper()), abs(len(x.song.genre)- len(filter_genre))))
         if filter_artist!='':
@@ -697,6 +697,7 @@ class PageBatchImportBase(QWidget):
             target_map.base = target_base
             target_map.save(db_conn, db_cursor)
         self.text_edit.clear()
+        self.init_combo_list()
 
 def start_app():
     app = QApplication(sys.argv)
